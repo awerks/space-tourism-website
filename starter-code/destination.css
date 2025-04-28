@@ -7,11 +7,8 @@ body {
 
 .destination {
     flex-grow: 1;
-    padding-block: var(--space-600);
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* display: grid;
-    place-content: end; */
+    /* padding-block: var(--space-600); */
+    margin-inline: auto;
     display: grid;
     grid-template-rows: auto 1fr;
 }
@@ -22,9 +19,10 @@ body {
     align-items: center;
 }
 
-.right>hr {
+hr {
+    color: #979797;
     margin-block: var(--space-500);
-    opacity: .15;
+    opacity: .25;
 }
 
 .planet-distance {
@@ -85,6 +83,10 @@ body {
         margin-bottom: var(--space-600);
     }
 
+    .planet-distance {
+        justify-content: center;
+    }
+
     .planet-image {
         max-width: 90%;
         margin-inline: auto;
@@ -101,8 +103,7 @@ body {
         justify-items: center;
     }
 
-    .right>hr {
+    hr {
         margin-block: var(--space-200);
-        opacity: 1;
     }
 }

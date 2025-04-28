@@ -12,8 +12,9 @@
 
         <title>Crew</title>
         <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="crew.css" />
     </head>
-    <body class="home">
+    <body>
         <header>
             <nav>
                 <div class="logo">
@@ -84,23 +85,42 @@
                 </ul>
             </nav>
         </header>
-        <main class="index">
-            <div class="left">
-                <p class="text-preset-4 uppercase text-color">
-                    So, yo want to travel to
-                </p>
-                <h1 class="uppercase">Space</h1>
-                <p class="content-text text-color">
-                    Let’s face it; if you want to go to space, you might as well
-                    genuinely go to outer space and not hover kind of on the
-                    edge of it. Well sit back, and relax because we’ll give you
-                    a truly out of this world experience!
-                </p>
-            </div>
-            <div class="right">
-                <button class="explore-button">Explore</button>
-            </div>
+        <main class="crew">
+            <h1 class="text-preset-5 uppercase numbered-title">
+                <span class="text-gray text-bold">02</span> Meet your crew
+            </h1>
+            <section class="crew-section grid grid-cols-2">
+                <div class="crew-info">
+                    <div class="crew-content flow" style="--gap: 1rem">
+                        <span class="text-preset-4 uppercase half-opacity block"
+                            >Commander</span
+                        >
+                        <h2 class="text-preset-3 uppercase text-white">
+                            Douglas Hurley
+                        </h2>
+                        <p class="text-preset-9 text-color">
+                            Douglas Gerald Hurley is an American engineer,
+                            former Marine Corps pilot and former NASA astronaut.
+                            He launched into space for the third time as
+                            commander of Crew Dragon Demo-2.
+                        </p>
+                    </div>
+                    <div class="dot-indicators">
+                        <button class="dot-indicator active"></button>
+                        <button class="dot-indicator"></button>
+                        <button class="dot-indicator"></button>
+                        <button class="dot-indicator"></button>
+                    </div>
+                </div>
+                <div class="img">
+                    <img
+                        src="./assets/crew/image-douglas-hurley.png"
+                        alt="Douglas Hurley"
+                        class="img-crew" />
+                </div>
+            </section>
         </main>
         <script src="index.js"></script>
+        <script src="crew.js"></script>
     </body>
 </html>

@@ -1,55 +1,64 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const exploreButton = document.querySelector(".explore-button");
-    const hamburgerOpenButton = document.querySelector(".hamburger-button.open");
-    const hamburgerCloseButton = document.querySelector(".hamburger-button.close");
+    const bodyElement = document.body;
+    const mobileNav = document.querySelector('.mobile-nav-links');
+    const openButton = document.getElementById('hamburger-button-open');
+    const closeButton = mobileNav.querySelector('.hamburger-button.close');
 
-    if (exploreButton && hamburgerOpenButton && hamburgerCloseButton) {
-        exploreButton.addEventListener("click", function () {
-            window.location.href = "destination.html";
-        });
-        hamburgerOpenButton.addEventListener("click", function () {
-
-            document.querySelector(".mobile-nav-links").classList.add("active");
-
-        });
-        hamburgerCloseButton.addEventListener("click", function () {
-            document.querySelector(".mobile-nav-links").classList.remove("active");
-
-        });
+    function openMobileNav() {
+        mobileNav.classList.add('active');
+        bodyElement.classList.add('no-scroll');
+        openButton.setAttribute('aria-expanded', 'true');
     }
 
+    function closeMobileNav() {
+        mobileNav.classList.remove('active');
+        bodyElement.classList.remove('no-scroll');
+        openButton.setAttribute('aria-expanded', 'false');
+    }
 
-    // document.querySelectorAll(".nav-links a").forEach((link) => {
-    //     link.addEventListener("click", function () {
-    //         document
-    //             .querySelector(".nav-links a.active")
-    //             .classList.remove("active");
-    //         this.classList.add("active");
+    openButton.addEventListener('click', openMobileNav);
+    closeButton.addEventListener('click', closeMobileNav);
 
-    //     });
-    // });
-    // // interal navigation, use aria-selected
-    // document.querySelectorAll(".nav-links button").forEach((button) => {
-    //     button.addEventListener("click", function () {
-    //         document
-    //             .querySelector(".nav-links button[aria-selected='true']")
-    //             .setAttribute("aria-selected", "false");
-    //         this.setAttribute("aria-selected", "true");
-    //     });
-    // }
-    // );
-    // document.querySelectorAll(".dot-indicator").forEach((dot) => {
-    //     dot.addEventListener("click", function () {
-    //         document
-    //             .querySelector(".dot-indicator[aria-selected='true']")
-    //             .setAttribute("aria-selected", "false");
-    //         this.setAttribute("aria-selected", "true");
+    document.documentElement.addEventListener('click', (event) => {
+        const isClickInside = mobileNav.contains(event.target) || openButton.contains(event.target);
 
-    //     });
-    // }
-    // );
-
-
-
+        if (!isClickInside && mobileNav.classList.contains('active')) {
+            closeMobileNav();
+        }
+    });
 });
+
+
+// document.querySelectorAll(".nav-links a").forEach((link) => {
+//     link.addEventListener("click", function () {
+//         document
+//             .querySelector(".nav-links a.active")
+//             .classList.remove("active");
+//         this.classList.add("active");
+
+//     });
+// });
+// // interal navigation, use aria-selected
+// document.querySelectorAll(".nav-links button").forEach((button) => {
+//     button.addEventListener("click", function () {
+//         document
+//             .querySelector(".nav-links button[aria-selected='true']")
+//             .setAttribute("aria-selected", "false");
+//         this.setAttribute("aria-selected", "true");
+//     });
+// }
+// );
+// document.querySelectorAll(".dot-indicator").forEach((dot) => {
+//     dot.addEventListener("click", function () {
+//         document
+//             .querySelector(".dot-indicator[aria-selected='true']")
+//             .setAttribute("aria-selected", "false");
+//         this.setAttribute("aria-selected", "true");
+
+//     });
+// }
+// );
+
+
+
 

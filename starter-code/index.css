@@ -326,7 +326,9 @@
 
     main {
         /* padding-inline: var(--space-2000); */
+        padding-block: var(--space-600);
         padding-inline: clamp(1rem, 5vw, var(--space-2000));
+        padding-inline: var(--space-2000);
     }
 
     body.home {
@@ -522,7 +524,8 @@
         background-color: hsl(var(--clr-white-hsl), 0.5);
     }
 
-    .dot-indicator[aria-selected="true"] {
+    .dot-indicator[aria-selected="true"],
+    .dot-indicator.active {
         background-color: var(--clr-white);
     }
 
@@ -558,7 +561,7 @@
 
         main {
             padding-inline: var(--space-500);
-
+            /* padding-block: 0; */
         }
 
         .logo {
@@ -566,7 +569,6 @@
         }
 
         .index {
-            margin-top: var(--space-1600);
             text-align: center;
             grid-template-columns: 1fr;
             gap: var(--space-500);
@@ -625,6 +627,10 @@
 
         body.home {
             background-image: url('./assets/home/background-home-mobile.jpg');
+        }
+
+        body.no-scroll {
+            overflow: hidden;
         }
 
         .inline-hr {
@@ -783,6 +789,12 @@
         clip: auto;
     }
 
+    .flow {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap, var(--space-300));
+    }
+
     .bg-dark {
         background-color: var(--clr-dark);
     }
@@ -850,7 +862,7 @@
 
     .text-preset-3 {
         font-size: var(--text-preset-3-font-size);
-        line-height: var(--text-preset-3-line-height);
+        /* line-height: var(--text-preset-3-line-height); */
         letter-spacing: var(--text-preset-3-letter-spacing);
     }
 
@@ -885,7 +897,7 @@
 
     .text-preset-6-desktop {
         font-size: 1.75rem;
-        /* line-height: 1.5; */
+        line-height: 1.5;
         letter-spacing: 0px;
     }
 
@@ -899,5 +911,13 @@
         font-size: var(--text-preset-9-font-size);
         line-height: var(--text-preset-9-line-height);
         letter-spacing: var(--text-preset-9-letter-spacing);
+    }
+
+    .half-opacity {
+        opacity: 0.5;
+    }
+
+    .block {
+        display: block;
     }
 }

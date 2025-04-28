@@ -90,8 +90,9 @@
                 <div class="left">
                     <div class="planet-image">
                         <picture>
+                            <source srcset="./assets/destination/image-moon.webp" type="image/webp">
                             <img
-                                src="./assets/destination/image-moon.webp"
+                                src="./assets/destination/image-moon.png"
                                 alt="Moon"  
                                 class="planet-image" />
                             
@@ -114,41 +115,45 @@
                                 <a>Titan</a>
                             </li>
                     </div>
-                    <div class="planet-name">
-                        <h2 class="text-preset-2 uppercase text-white">Moon</h2>
-                    </div>
-                    <div class="planet-description">
-                        <p class="text-preset-9 text-color">
-                            See our planet as you’ve never seen it before. A
-                            perfect relaxing trip away to help regain
-                            perspective and come back refreshed. While you’re
-                            there, take in some history by visiting the Luna 2
-                            and Apollo 11 landing sites.
-                        </p>
-                    </div>
-                    <hr />
-                    <div class="planet-distance">
-                        <div class="distance">
-                            <p class="text-preset-7-desktop text-color uppercase">
-                                Avg. distance
-                            </p>
-                            <h3 class="text-preset-6-desktop uppercase text-white">
-                                384,400 km
-                            </h3>
+                    <div class="planet-content">
+                        <div class="planet-name">
+                            <h1 class="text-preset-2 uppercase text-white" id="name">Moon</h1>
                         </div>
-                        <div class="travel-time">
-                            <p class="text-preset-7-desktop text-color uppercase">
-                                Est. travel time
+                        <div class="planet-description">
+                            <p class="text-preset-9 text-color" id="description">
+                                See our planet as you’ve never seen it before. A
+                                perfect relaxing trip away to help regain
+                                perspective and come back refreshed. While you’re
+                                there, take in some history by visiting the Luna 2
+                                and Apollo 11 landing sites.
                             </p>
-                            <h3
-                                class="text-preset-6-desktop uppercase text-white uppercase">
-                                3 days
-                            </h3>
+                        </div>
+                        <hr />
+                        <div class="planet-distance">
+                            <div class="distance">
+                                <p class="text-preset-7-desktop text-color uppercase">
+                                    Avg. distance
+                                </p>
+                                <h3 class="text-preset-6-desktop uppercase text-white" id="distance" >
+                                    384,400 km
+                                </h3>
+                            </div>
+                            <div class="travel-time">
+                                <p class="text-preset-7-desktop text-color uppercase">
+                                    Est. travel time
+                                </p>
+                                <h3
+                                    class="text-preset-6-desktop uppercase text-white uppercase" id="travel">
+                                    3 days
+                                </h3>
+                            </div>
                         </div>
                     </div>
+                 
                 </div>
             </div>
         </main>
         <script src="index.js"></script>
+        <script src="destination.js"></script>
     </body>
 </html>
