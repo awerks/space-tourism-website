@@ -1,0 +1,108 @@
+body {
+    background-image: url("./assets/destination/background-destination-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.destination {
+    flex-grow: 1;
+    padding-block: var(--space-600);
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* display: grid;
+    place-content: end; */
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+
+.destination>.grid {
+    /* flex-grow: 1; */
+    align-items: center;
+}
+
+.right>hr {
+    margin-block: var(--space-500);
+    opacity: .15;
+}
+
+.planet-distance {
+    display: flex;
+    gap: var(--space-1000);
+}
+
+.planet-name {
+    margin-block: var(--space-500)
+}
+
+.planet-nav {
+    --underline-offset: calc(-1 * var(--space-200));
+    backdrop-filter: none;
+    padding: 0;
+}
+
+.planet-nav li {
+    transition: color 0.3s ease-in-out;
+}
+
+.planet-nav li:hover {
+    color: var(--clr-white);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url("./assets/destination/background-destination-mobile.jpg");
+    }
+
+    .planet-nav {
+        gap: var(--space-400);
+    }
+
+    .planet-image {
+        max-width: 50%;
+        margin-inline: auto;
+    }
+
+    .planet-distance {
+        flex-direction: column;
+        gap: var(--space-200);
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-image: url("./assets/destination/background-destination-tablet.jpg");
+    }
+
+    .destination {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    h1 {
+        margin-bottom: var(--space-600);
+    }
+
+    .planet-image {
+        max-width: 90%;
+        margin-inline: auto;
+    }
+
+    .destination>.grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .right {
+        display: grid;
+        justify-items: center;
+    }
+
+    .right>hr {
+        margin-block: var(--space-200);
+        opacity: 1;
+    }
+}

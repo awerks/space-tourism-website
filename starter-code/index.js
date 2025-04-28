@@ -5,27 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (exploreButton && hamburgerOpenButton && hamburgerCloseButton) {
         exploreButton.addEventListener("click", function () {
-            window.location.href = "explore.html";
+            window.location.href = "destination.html";
         });
         hamburgerOpenButton.addEventListener("click", function () {
-            const navLinks = document.querySelectorAll(".nav-links li:not(.hamburger-button.open)");
-            navLinks.forEach((link) => {
-                link.style.display = "block";
-            });
 
-            hamburgerOpenButton.style.display = "none";
+            document.querySelector(".mobile-nav-links").classList.add("active");
 
         });
         hamburgerCloseButton.addEventListener("click", function () {
-            const navLinks = document.querySelector(".nav-links");
-            navLinks.querySelectorAll("li:not(.hamburger-button.open)").forEach((link) => {
-                link.style.display = "none";
-            });
-            const liOpenButton = document.querySelector("li:has(.hamburger-button.open)");
-            liOpenButton.style.display = "block";
-            hamburgerOpenButton.style.display = "block";
-            navLinks.style.height = "auto";
-            navLinks.style.width = "auto";
+            document.querySelector(".mobile-nav-links").classList.remove("active");
 
         });
     }
