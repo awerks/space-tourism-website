@@ -6,7 +6,6 @@ body {
 }
 
 
-
 .crew {
     flex-grow: 1;
     display: grid;
@@ -15,19 +14,21 @@ body {
 }
 
 .crew-info {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
     display: grid;
-    /* grid-template-rows: auto 1fr auto; */
-    /* align-items: center; */
     grid-template-rows: 1fr auto;
 }
 
 .img {
-    max-width: 70%;
-    align-self: center;
+    align-self: end;
+    -webkit-mask-image: linear-gradient(to bottom,
+            black 70%,
+            transparent 100%);
+    mask-image: linear-gradient(to bottom,
+            black 70%,
+            transparent 100%);
+    mask-mode: alpha;
 }
+
 
 .crew-content {
     align-self: center;
@@ -44,11 +45,11 @@ body {
 @media screen and (max-width: 1000px) {
     body {
         background-image: url("./assets/crew/background-crew-tablet.jpg");
+        padding-bottom: 0;
     }
 
     .crew-section {
         grid-template-columns: 1fr;
-        /* justify-items: center; */
         text-align: center;
     }
 
@@ -73,14 +74,5 @@ body {
         text-align: center;
     }
 
-    /* 
-    .crew-info {
-        grid-template-rows: auto 1fr auto;
-        align-items: center;
-    }
-
-    .img {
-        max-width: 100%;
-    } */
 
 }

@@ -538,6 +538,7 @@
         background-color: transparent;
         align-self: start;
         outline: hsl(var(--clr-white-hsl), .5) solid 1px;
+        transition: outline-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
         color: var(--clr-white)
     }
 
@@ -785,6 +786,10 @@
 
     .align-items-start {
         align-items: flex-start;
+    }
+
+    .align-items-end {
+        align-items: flex-end;
     }
 
     .justify-center {
