@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400&family=Barlow+Condensed:wght@400&family=Bellefair:wght@400&display=swap');
 
-@layer reset, base, components, responsive, utilities;
+@layer reset, base, components, utilities, responsive;
 
 
 @layer reset {
@@ -68,7 +68,7 @@
     }
 
     p {
-        max-width: 65ch;
+        max-width: 60ch;
     }
 
     /* A elements that don't have a class get default styles */
@@ -238,42 +238,36 @@
     }
 
     h1 {
-        font-family: var(--font-family-bellefair);
         font-size: var(--text-preset-1-font-size);
         line-height: var(--text-preset-1-line-height);
         letter-spacing: var(--text-preset-1-letter-spacing);
     }
 
     h2 {
-        font-family: var(--font-family-bellefair);
         font-size: var(--text-preset-2-font-size);
         line-height: var(--text-preset-2-line-height);
         letter-spacing: var(--text-preset-2-letter-spacing);
     }
 
     h3 {
-        font-family: var(--font-family-bellefair);
         font-size: var(--text-preset-3-font-size);
         line-height: var(--text-preset-3-line-height);
         letter-spacing: var(--text-preset-3-letter-spacing);
     }
 
     h4 {
-        font-family: var(--font-family-bellefair);
         font-size: var(--text-preset-4-font-size);
         line-height: var(--text-preset-4-line-height);
         letter-spacing: var(--text-preset-4-letter-spacing);
     }
 
     h5 {
-        font-family: var(--font-family-barlow-condensed);
         font-size: var(--text-preset-5-font-size);
         line-height: var(--text-preset-5-line-height);
         letter-spacing: var(--text-preset-5-letter-spacing);
     }
 
     h6 {
-        font-family: var(--font-family-bellefair);
         font-size: var(--text-preset-6-font-size);
         line-height: var(--text-preset-6-line-height);
         letter-spacing: var(--text-preset-6-letter-spacing);
@@ -328,7 +322,7 @@
         /* padding-inline: var(--space-2000); */
         padding-block: var(--space-600);
         padding-inline: clamp(1rem, 5vw, var(--space-2000));
-        padding-inline: var(--space-2000);
+        /* padding-inline: var(--space-2000); */
     }
 
     body.home {
@@ -529,13 +523,37 @@
         background-color: var(--clr-white);
     }
 
+    .numbered-indicators {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-400);
+    }
+
+    .numbered-indicator {
+        cursor: pointer;
+        height: 80px;
+        aspect-ratio: 1;
+        border: 0;
+        border-radius: 50%;
+        background-color: transparent;
+        align-self: start;
+        outline: hsl(var(--clr-white-hsl), .5) solid 1px;
+        color: var(--clr-white)
+    }
+
+    .numbered-indicator:is(:hover, :focus-visible):not(.active, [aria-selected="true"]) {
+        outline-color: var(--clr-white);
+    }
+
+    .numbered-indicator[aria-selected="true"],
+    .numbered-indicator.active {
+        background-color: var(--clr-white);
+        color: var(--clr-dark);
+    }
+
     .index {
-        flex-grow: 1;
-        display: grid;
         place-content: end;
-        grid-template-columns: 1fr 1fr;
         gap: var(--space-1000);
-        justify-items: center;
         padding-block: var(--space-2000);
     }
 
@@ -568,7 +586,7 @@
             padding-left: var(--space-400);
         }
 
-        .index {
+        main.index {
             text-align: center;
             grid-template-columns: 1fr;
             gap: var(--space-500);
@@ -584,6 +602,14 @@
             font-size: 1rem;
         }
 
+        .numbered-indicators {
+            flex-direction: row;
+            gap: var(--space-200);
+        }
+
+        .numbered-indicator {
+            height: 56px;
+        }
 
 
         .dot-indicator {
@@ -611,6 +637,9 @@
         }
 
         main {
+            padding-top: var(--space-300);
+            padding-bottom: 0;
+
             padding-inline: var(--space-300);
         }
 
@@ -623,6 +652,12 @@
             margin-top: 5rem;
             height: 144px;
             aspect-ratio: 1 / 1;
+        }
+
+
+
+        .numbered-indicator {
+            height: 40px;
         }
 
         body.home {
@@ -744,11 +779,11 @@
         flex-grow: 1;
     }
 
-    .items-center {
+    .align-items-center {
         align-items: center;
     }
 
-    .items-start {
+    .align-items-start {
         align-items: flex-start;
     }
 
@@ -758,6 +793,14 @@
 
     .justify-start {
         justify-content: flex-start;
+    }
+
+    .justify-items-center {
+        justify-items: center;
+    }
+
+    .justify-self-center {
+        justify-self: center;
     }
 
     .grid {
@@ -849,65 +892,76 @@
     }
 
     .text-preset-1 {
+        font-family: var(--font-family-bellefair);
         font-size: var(--text-preset-1-font-size);
         line-height: var(--text-preset-1-line-height);
         letter-spacing: var(--text-preset-1-letter-spacing);
     }
 
     .text-preset-2 {
+        font-family: var(--font-family-bellefair);
         font-size: var(--text-preset-2-font-size);
         line-height: var(--text-preset-2-line-height);
         letter-spacing: var(--text-preset-2-letter-spacing);
     }
 
     .text-preset-3 {
+        font-family: var(--font-family-bellefair);
         font-size: var(--text-preset-3-font-size);
         /* line-height: var(--text-preset-3-line-height); */
         letter-spacing: var(--text-preset-3-letter-spacing);
     }
 
     .text-preset-4 {
+        font-family: var(--font-family-bellefair);
         font-size: var(--text-preset-4-font-size);
         /* line-height: var(--text-preset-4-line-height); */
         /* letter-spacing: var(--text-preset-4-letter-spacing); */
     }
 
     .text-preset-5 {
+        font-family: var(--font-family-barlow-condensed);
         font-size: var(--text-preset-5-font-size);
         line-height: var(--text-preset-5-line-height);
         letter-spacing: var(--text-preset-5-letter-spacing);
     }
 
     .text-preset-6 {
+        font-family: var(--font-family-bellefair);
         font-size: var(--text-preset-6-font-size);
         line-height: var(--text-preset-6-line-height);
         letter-spacing: var(--text-preset-6-letter-spacing);
     }
 
     .text-preset-7 {
+        font-family: var(--font-family-barlow-condensed);
         font-size: var(--text-preset-7-font-size);
         line-height: var(--text-preset-7-line-height);
         letter-spacing: var(--text-preset-7-letter-spacing);
     }
 
     .text-preset-7-desktop {
+        font-family: var(--font-family-barlow-condensed);
         font-size: 0.875rem;
         letter-spacing: 2px;
     }
 
     .text-preset-6-desktop {
+        font-family: var(--font-family-bellefair);
         font-size: 1.75rem;
         line-height: 1.5;
         letter-spacing: 0px;
     }
 
     .text-preset-8 {
+        font-family: var(--font-family-barlow-condensed);
         font-size: var(--text-preset-8-font-size);
         line-height: var(--text-preset-8-line-height);
         letter-spacing: var(--text-preset-8-letter-spacing);
     }
 
     .text-preset-9 {
+        font-family: var(--font-family-barlow);
         font-size: var(--text-preset-9-font-size);
         line-height: var(--text-preset-9-line-height);
         letter-spacing: var(--text-preset-9-letter-spacing);

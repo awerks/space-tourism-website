@@ -1,0 +1,76 @@
+body {
+    background-image: url("./assets/technology/background-technology-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+}
+
+.technology {
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin-inline: auto;
+}
+
+.left {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: var(--space-800);
+}
+
+.right img {
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-image: url("./assets/technology/background-technology-tablet.jpg");
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        margin-top: var(--space-800);
+    }
+
+    .technology {
+        padding-inline: 0;
+        margin-inline: 0;
+    }
+
+    .left {
+        order: 1;
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-400);
+    }
+
+    .right {
+        justify-self: auto;
+    }
+
+    .right img {
+        width: 100%;
+        align-self: start;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url("./assets/technology/background-technology-mobile.jpg");
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .left {
+        padding-inline: var(--space-300);
+    }
+
+    .right img {
+        max-height: 18rem;
+    }
+
+}

@@ -4,14 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
 
         <title>Technology</title>
         <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="technology.css" />
     </head>
     <body class="home">
         <header>
@@ -27,22 +24,16 @@
                         <a href="index.html"><span>00</span>Home</a>
                     </li>
                     <li>
-                        <a href="destination.html"
-                            ><span>01</span>Destination</a
-                        >
+                        <a href="destination.html"><span>01</span>Destination</a>
                     </li>
                     <li>
                         <a href="crew.html"><span>02</span>Crew</a>
                     </li>
                     <li>
-                        <a class="active" href="technology.html"
-                            ><span>03</span>Technology</a
-                        >
+                        <a class="active" href="technology.html"><span>03</span>Technology</a>
                     </li>
                 </ul>
-                <button
-                    class="hamburger-button open"
-                    id="hamburger-button-open">
+                <button class="hamburger-button open" id="hamburger-button-open">
                     <img
                         src="./assets/shared/icon-hamburger.svg"
                         alt="Open
@@ -69,36 +60,61 @@
                         <a href="index.html"><span>00</span>Home</a>
                     </li>
                     <li>
-                        <a href="destination.html"
-                            ><span>01</span>Destination</a
-                        >
+                        <a href="destination.html"><span>01</span>Destination</a>
                     </li>
                     <li>
                         <a href="crew.html"><span>02</span>Crew</a>
                     </li>
                     <li>
-                        <a class="active" href="technology.html"
-                            ><span>03</span>Technology</a
-                        >
+                        <a class="active" href="technology.html"><span>03</span>Technology</a>
                     </li>
                 </ul>
             </nav>
         </header>
-        <main class="index">
-            <div class="left">
-                <p class="text-preset-4 uppercase text-color">
-                    So, yo want to travel to
-                </p>
-                <h1 class="uppercase">Space</h1>
-                <p class="content-text text-color">
-                    Let’s face it; if you want to go to space, you might as well
-                    genuinely go to outer space and not hover kind of on the
-                    edge of it. Well sit back, and relax because we’ll give you
-                    a truly out of this world experience!
-                </p>
-            </div>
-            <div class="right">
-                <button class="explore-button">Explore</button>
+        <main class="technology">
+            <h1 class="text-preset-5 uppercase numbered-title">
+                <span class="text-gray text-bold">03</span>Space launch 101
+            </h1>
+            <div class="grid grid-cols-2 align-items-center">
+                <div class="left">
+                    <div>
+                        <div class="numbered-indicators">
+                            <button class="numbered-indicator active" id="launch-vehicle">
+                                <span class="text-preset-4">1</span>
+                            </button>
+                            <button class="numbered-indicator" id="spaceport">
+                                <span class="text-preset-4">2</span>
+                            </button>
+                            <button class="numbered-indicator" id="space-capsule">
+                                <span class="text-preset-4">3</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-preset-4 uppercase half-opacity block">The terminology...</span>
+                        <h1 class="text-preset-3 text-white uppercase">Launch vehicle</h1>
+                        <p class="content-text text-color">
+                            A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload
+                            from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is
+                            the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight
+                            on the launch pad!
+                        </p>
+                    </div>
+                </div>
+                <div class="right justify-self-center">
+                    <picture>
+                        <source
+                            srcset="assets/technology/image-launch-vehicle-portrait.jpg"
+                            media="(max-width: 768px)"
+                            type="image/jpg" />
+                        <source
+                            srcset="assets/technology/image-launch-vehicle-landscape.jpg"
+                            media="(max-width: 1000px)"
+                            type="image/jpg" />
+
+                        <img src="assets/technology/image-launch-vehicle-portrait.jpg" alt="Launch vehicle" />
+                    </picture>
+                </div>
             </div>
         </main>
         <script src="index.js"></script>

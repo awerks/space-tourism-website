@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobileNav = document.querySelector('.mobile-nav-links');
     const openButton = document.getElementById('hamburger-button-open');
     const closeButton = mobileNav.querySelector('.hamburger-button.close');
+    const exploreButton = document.querySelector('.explore-button');
 
     function openMobileNav() {
         mobileNav.classList.add('active');
@@ -26,6 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
             closeMobileNav();
         }
     });
+    if (exploreButton) {
+        exploreButton.addEventListener('click', function () {
+            window.location.href = 'destination.html';
+        });
+    }
 });
 
 

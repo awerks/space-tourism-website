@@ -7,8 +7,11 @@ body {
 
 
 
-main {
+.crew {
     flex-grow: 1;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin-inline: auto;
 }
 
 .crew-info {
@@ -23,6 +26,7 @@ main {
 
 .img {
     max-width: 70%;
+    align-self: center;
 }
 
 .crew-content {
@@ -44,7 +48,7 @@ main {
 
     .crew-section {
         grid-template-columns: 1fr;
-        justify-items: center;
+        /* justify-items: center; */
         text-align: center;
     }
 
