@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 imgPortraitSource.srcset = selectedTech.images.portrait;
                 imgLandscapeSource.srcset = selectedTech.images.landscape;
-                fallbackImage.src = selectedTech.images.portrait; // Use portrait as fallback
+                fallbackImage.src = selectedTech.images.portrait;
                 fallbackImage.alt = selectedTech.name;
 
                 indicatorButtons.forEach(button => {

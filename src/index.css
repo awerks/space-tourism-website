@@ -5,6 +5,8 @@
 
 @layer reset {
 
+    /* CSS Reset */
+    /* https: //www.joshwcomeau.com/css/custom-css-reset/ */
     *,
     *::before,
     *::after {
@@ -286,7 +288,6 @@
         font-size: var(--text-preset-9-font-size);
         line-height: var(--text-preset-9-line-height);
         letter-spacing: var(--text-preset-9-letter-spacing);
-        /* font-weight: 400; */
     }
 
     h1,
@@ -313,22 +314,17 @@
 
 @layer components {
     body {
-
         padding-top: var(--space-500);
-        /* padding-bottom: var(--space-2000); */
     }
 
     main {
-        /* padding-inline: var(--space-2000); */
         padding-block: var(--space-600);
         padding-inline: clamp(1rem, 5vw, var(--space-2000));
-        /* padding-inline: var(--space-2000); */
     }
 
     body.home {
         background-image: url('./assets/home/background-home-desktop.jpg');
         background-size: cover;
-        /* padding: 2rem; */
         background-position: center center;
         background-repeat: no-repeat;
 
@@ -356,7 +352,6 @@
     .numbered-title {
         font-family: var(--font-family-barlow-condensed);
         font-size: var(--text-preset-5-font-size);
-        /* line-height: var(--text-preset-5-line-height); */
         letter-spacing: 4.72px;
         text-transform: uppercase;
         font-weight: 500;
@@ -364,7 +359,6 @@
 
     .numbered-title span {
         color: var(--clr-white);
-        /* opacity: 0.25; */
         margin-right: .5em;
         font-weight: 700;
     }
@@ -396,16 +390,11 @@
     }
 
     nav {
-        /* margin-top: var(--space-400); */
         display: flex;
         align-items: center;
         justify-content: space-between;
-        /* margin-bottom: 12rem; */
     }
 
-    /* .hamburger {
-        display: none;
-    } */
 
     .hamburger-button {
         border: none;
@@ -424,13 +413,10 @@
 
     .inline-hr {
         display: inline-block;
-        /* make it inline-level */
         width: 100%;
         opacity: .3;
         border: none;
-        /* remove default */
         border-top: 2px solid currentColor;
-        /* draw the line */
     }
 
     .nav-links {
@@ -580,7 +566,6 @@
 
         main {
             padding-inline: var(--space-500);
-            /* padding-block: 0; */
         }
 
         .logo {
@@ -913,15 +898,13 @@
     .text-preset-3 {
         font-family: var(--font-family-bellefair);
         font-size: var(--text-preset-3-font-size);
-        /* line-height: var(--text-preset-3-line-height); */
         letter-spacing: var(--text-preset-3-letter-spacing);
     }
 
     .text-preset-4 {
         font-family: var(--font-family-bellefair);
         font-size: var(--text-preset-4-font-size);
-        /* line-height: var(--text-preset-4-line-height); */
-        /* letter-spacing: var(--text-preset-4-letter-spacing); */
+
     }
 
     .text-preset-5 {

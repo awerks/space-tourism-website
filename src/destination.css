@@ -6,14 +6,12 @@ body {
 }
 
 .destination {
-    /* padding-block: var(--space-600); */
     margin-inline: auto;
     display: grid;
     grid-template-rows: auto 1fr;
 }
 
 .left .destination>.grid {
-    /* flex-grow: 1; */
     align-items: center;
 }
 
